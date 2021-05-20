@@ -12,10 +12,10 @@ The development of this package is supported by the SMARTFARM project. The SMART
 This function calculates the average temperature based on the time series (daily) and the time frame specified by input year and months.    
  
 Input: 
-Temperature time series - daily: pandas data frame 
-Time series data frame that contains dates and daily temperature values. 
-Year: integer
-This value specifies the year for which calculation average temperature has to be calculated. 
+Temperature time series - daily: pandas data frame \
+Time series data frame that contains dates and daily temperature values. \
+Year: integer \
+This value specifies the year for which calculation average temperature has to be calculated. \
 Months: array (int), Default=[1,12]
 Two-dimensional array specifies the starting month and ending month for which average temperature has to be calculated.
  
@@ -48,6 +48,8 @@ This function calculates the value of extreme degree days based on the time seri
 Input: 
 Temperature time series - daily: pandas data frame 
 Time series data frame that contains dates and daily temperature values. 
+Threshold Temperature: float
+This value specifies the temperature value above which days are considered in the extreme degree days sum.
 Year: integer
 This value specifies the year for which calculation average temperature has to be calculated. 
 Months: array (int), Default=[1,12]
