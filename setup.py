@@ -21,9 +21,9 @@ def version(path):
     raise RuntimeError("Unable to find version string.")
 
 
-setup(name='pylenm',
-      version=version('pylenm/__init__.py'),
-      description='This package aims to ...',
+setup(name='py4openag',
+      version=version('py4openag/__init__.py'),
+      description='This open-source package aims to establish the ML4Ops pipeline from public databases to integrated analytics for agriculture. It provides  a variety of functions  to study climate trends and simplify the calculation of commonly used metrics in agriculture. ',
       long_description=long_description,
       long_description_content_type="text/markdown",
       url='https://github.com/niveditapatel/py4openag',
@@ -32,23 +32,9 @@ setup(name='pylenm',
       license='MIT',
       packages=setuptools.find_packages(),
       install_requires=[
-        'markdown',
         'pandas',
-        'openpyxl',
-        'elevation',
-        'richdem',
-        'rasterio',
-        'numpy',
-        'seaborn',
-        'matplotlib',
-        'statsmodels',
-        'scipy',
-        'pyproj',
         'datetime',
         'sklearn',
-        'supersmoother',
-        'ipyleaflet>=0.13.0',
-        'ipywidgets>=7.5.0'
         ],
       classifiers=[
         "Programming Language :: Python :: 3",

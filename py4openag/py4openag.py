@@ -20,13 +20,13 @@ class functions:
       print(validation[1])
 
   def has_columns(self,data):
-    if set(['mean_2m_air_temperature','total_precipitation','startDate']).issubset(data.columns):
+    if set(['mean_2m_air_temperature','minimum_2m_air_temperature','maximum_2m_air_temperature','total_precipitation','Date']).issubset(data.columns):
       return (True,None)
     else:
       return (False,"Data is missing columns")
 
   def data_validation(self,data):
-    if (data['startDate'].dtype=='datetime64[ns]'):
+    if (data['Date'].dtype=='datetime64[ns]'):
       return (True,None)
     else:
       return (False, "Date has to be in datetime format")
@@ -34,9 +34,9 @@ class functions:
   def extreme_degree_days(self,data,thresholdtemp, year, months=[1,12]): 
     sum=self.integral_time(data,thresholdtemp,'above',year,months)
     new_df=pd.DataFrame()
-    tempdata=data[data['startDate'].dt.year==year]
+    tempdata=data[data['Date'].dt.year==year]
     for i in range(months[0],months[1]+1):
-      new_df=new_df.append(tempdata[tempdata['startDate'].dt.month==i], ignore_index = True)
+      new_df=new_df.append(tempdata[tempdata['Date'].dt.month==i], ignore_index = True)
     index=new_df.index
     extreme_degree_days=sum/len(index)
     return extreme_degree_days
@@ -44,9 +44,9 @@ class functions:
   def integral_time(self,data, threshold, area, year, months): 
     sum=0
     new_df=pd.DataFrame()
-    tempdata=data[data['startDate'].dt.year==year]
+    tempdata=data[data['Date'].dt.year==year]
     for i in range(months[0],months[1]+1):
-      new_df=new_df.append(tempdata[tempdata['startDate'].dt.month==i], ignore_index = True)
+      new_df=new_df.append(tempdata[tempdata['Date'].dt.month==i], ignore_index = True)
     if area=='above':
       for i, j in new_df.iterrows(): 
         sum+=max((j['mean_2m_air_temperature']-threshold),0)
@@ -58,7 +58,7 @@ class functions:
   def growing_degree_days(self,data,year,basetemp):
     sum=0
     k=0
-    new_df=data[data['startDate'].dt.year==year]
+    new_df=data[data['Date'].dt.year==year]
     for i, j in new_df.iterrows(): 
         temp=(((j['minimum_2m_air_temperature']+j['maximum_2m_air_temperature'])/2)- basetemp)
         if (temp>0):
@@ -79,17 +79,17 @@ class functions:
   
   def average_temperature(self,data,year,months=[1,12]):
     new_df=pd.DataFrame()
-    tempdata=data[data['startDate'].dt.year==year]
+    tempdata=data[data['Date'].dt.year==year]
     for i in range(months[0],months[1]+1):
-      new_df=new_df.append(tempdata[tempdata['startDate'].dt.month==i], ignore_index = True)
+      new_df=new_df.append(tempdata[tempdata['Date'].dt.month==i], ignore_index = True)
     avg=new_df['mean_2m_air_temperature'].mean()
     return avg
 
   def total_precipitation(self,data,year,months=[1,12]):
     new_df=pd.DataFrame()
-    tempdata=data[data['startDate'].dt.year==year]
+    tempdata=data[data['Date'].dt.year==year]
     for i in range(months[0],months[1]+1):
-      new_df=new_df.append(tempdata[tempdata['startDate'].dt.month==i], ignore_index = True)
+      new_df=new_df.append(tempdata[tempdata['Date'].dt.month==i], ignore_index = True)
     sum=new_df['total_precipitation'].sum()
     return sum
 
@@ -98,7 +98,7 @@ class functions:
     pvalT=[]
     yearavg=[]
     for year in range(years[0],years[1]+1):
-      new_df=data[data['startDate'].dt.year==year]
+      new_df=data[data['Date'].dt.year==year]
       avg=new_df['mean_2m_air_temperature'].mean()
       yearavg.append(avg)
     x = np.array(yearavg)
