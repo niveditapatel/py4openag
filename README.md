@@ -47,7 +47,7 @@ This function calculates the value of extreme degree days based on the time seri
  
 Input: \
 Temperature time series - daily: pandas data frame \
-Time series data frame that contains dates and daily temperature values. \ 
+Time series data frame that contains dates and daily temperature values. __ 
 Threshold Temperature: float \
 This value specifies the temperature value above which days are considered in the extreme degree days sum.\
 Year: integer\
