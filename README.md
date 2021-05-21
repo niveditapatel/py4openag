@@ -17,7 +17,7 @@ Time series data frame that contains dates and daily temperature values. \
 Year: integer \
 This value specifies the year for which calculation average temperature has to be calculated. \
 Months: array (int), Default=[1,12]\
-Two-dimensional array specifies the starting month and ending month for which average temperature has to be calculated.\
+Two-dimensional array specifies the starting month and ending month for which average temperature has to be calculated.
  
 Output:\
 Avg: float:\
@@ -34,7 +34,7 @@ Time series data frame that contains dates and daily precipitation values. \
 Year: integer\
 This value specifies the year for which calculation average temperature has to be calculated. \
 Months: array (int), Default=[1,12]\
-Two-dimensional array specifies the starting month and ending month for which average temperature has to be calculated.\
+Two-dimensional array specifies the starting month and ending month for which average temperature has to be calculated.
  
 Output:\
 sum: float:\
@@ -66,7 +66,7 @@ This function computes the growing degree days based on the temperature time ser
 Input: \
 Temperature time series - daily: pandas data frame \
 Time series data frame that contains dates and daily temperature values. \
-Year: integer\
+Year: integer \
 This value specifies the year for which calculation average temperature has to be calculated. \
 Base temperature: float:\
 This value specifies the base temperature \
