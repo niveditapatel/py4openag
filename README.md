@@ -78,8 +78,8 @@ Returns value of growing degree days
  
 This function provides the base temperature for a certain crop. The data is based on the baselines provided from reference [Reference Link](https://en.wikipedia.org/wiki/Growing_degree-day).
  
-Input: \ 
-Crop type: string \ 
+Input:\ 
+Crop type: string\ 
 String value specifies the crop type that bast temperature needs to be determined for. Enter value from: [wheat,barley,rye,oats,flaxseed,lettuce,asparagus,sunflower,potato,maize,sorghum,rice,soybeans,tomato,coffee] 
  
 Output: \
