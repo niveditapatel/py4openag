@@ -6,106 +6,20 @@ The development of this package is supported by the SMARTFARM project. The SMART
 
 
 ## Functions In The Package:
+The following functions are currently included in the package. More information and a demonstration on each function can be found in the links provided.
 
-#### Annual Average Temperature: average_temperature
- 
-This function calculates the average temperature based on the time series (daily) and the time frame specified by input year and months.    
- 
-Input: \
-Temperature time series - daily: pandas data frame \
-Time series data frame that contains dates and daily temperature values. \
-Year: integer \
-This value specifies the year for which calculation average temperature has to be calculated. \
-Months: array (int), Default=[1,12]\
-Two-dimensional array specifies the starting month and ending month for which average temperature has to be calculated.
- 
-Output:\
-Avg: float:\
-Returns average temperature value
- 
- 
-#### Annual Total Precipitation: total_precipitation
- 
-This function calculates the total precipitation based on the time series (daily) and the time frame specified by input year and months.    
- 
-Input: \
-Temperature time series - daily: pandas data frame \
-Time series data frame that contains dates and daily precipitation values. \
-Year: integer\
-This value specifies the year for which calculation average temperature has to be calculated. \
-Months: array (int), Default=[1,12]\
-Two-dimensional array specifies the starting month and ending month for which average temperature has to be calculated.
- 
-Output:\
-sum: float:\
-Returns sum of precipitation value
- 
- 
-#### Extreme Degree Days: extreme_degree_days
- 
-This function calculates the value of extreme degree days based on the time series (daily) and the time frame specified by input year and months.    
- 
-Input: \
-Temperature time series - daily: pandas data frame \
-Time series data frame that contains dates and daily temperature values. <br> 
-Threshold Temperature: float \
-This value specifies the temperature value above which days are considered in the extreme degree days sum.\
-Year: integer\
-This value specifies the year for which calculation average temperature has to be calculated. \
-Months: array (int), Default=[1,12]\
-Two-dimensional array specifies the starting month and ending month for which average temperature has to be calculated.
- 
-Output:\
-extreme_degree_days: float \
-Returns value of extreme degree days
- 
-#### Growing degree days: growing_degree_days
- 
-This function computes the growing degree days based on the temperature time series (daily) and the base temperature. The base temperature depends on the crop and can be found using the growingdays_basetemp() function.
- 
-Input: \
-Temperature time series - daily: pandas data frame \
-Time series data frame that contains dates and daily temperature values. \
-Year: integer \
-This value specifies the year for which calculation average temperature has to be calculated. \
-Base temperature: float:\
-This value specifies the base temperature \
-Output: \
-Growing degree days: float\
-Returns value of growing degree days
- 
-#### Base Temperature For Growing Degree Days: growingdays_basetemp 
- 
-This function provides the base temperature for a certain crop. The data is based on the baselines provided from reference [Reference Link](https://en.wikipedia.org/wiki/Growing_degree-day).
- 
-Input: \
-Crop type: string \
-String value specifies the crop type that bast temperature needs to be determined for. Enter value from: [wheat,barley,rye,oats,flaxseed,lettuce,asparagus,sunflower,potato,maize,sorghum,rice,soybeans,tomato,coffee] 
- 
-Output: \
-Base temperature: float \
-Returns the base temperature value in degrees celsius
- 
-#### Temperature Trend: temptrend
- 
-This function calculates a series of annual average temperature for the years specified and linear regression of annual average temperature as a function of year. 
- 
-Input: \
-Temperature time series - daily: pandas data frame \
-Time series data frame that contains dates and daily temperature values. \
-Years: array (int)\
-Two dimensional array specifies the starting year and ending year for which trend has to be determined. Years should be entered as integers in the array.
- 
-Output:\
-R-value: float\
-Pearson correlation coefficient for year vs annual T time series\
-P-value: float\
-P-value of trend\
-Regression coefficient: float\
-Slope/trend of year vs annual temperature
+[Annual Average Temperature: average_temperature](https://colab.research.google.com/drive/1yAIbQYOK6uNcoUJkx4TYnYExj5YYoFQj?usp=sharing) <br>
+[Annual Total Precipitation: total_precipitation](https://colab.research.google.com/drive/12jJ3PITv0XxCKnlSbLCbk-j9Pp15b98h?usp=sharing)<br>
+[Extreme Degree Days: extreme_degree_days](https://colab.research.google.com/drive/1lVU1J_9P2Nl7EweV_ZkJPhvQerJlBcGt?usp=sharing) <br>
+[Growing degree days: growing_degree_days](https://colab.research.google.com/drive/17gCluadiRPwwEdybSuuFyYoHyuaJV7WT?usp=sharing) <br>
+[Base Temperature For Growing Degree Days: growingdays_basetemp](https://colab.research.google.com/drive/1mkQNKEM_QsAMLzFSyuHQi5p9p8r6Rboj?usp=sharing) <br>
 
-## Demonstration Of Functions:
+[Temperature Trend: temptrend](https://colab.research.google.com/drive/1MQ2i8PwOeE3mBQL_YRkFqS5d2njyCYxU?usp=sharing) <br>
 
-1. [Download data from GEE](https://colab.research.google.com/drive/1hjUK8Dm66VqoQkbXcvv-405CT4wGDuPL)
-2. [Running functions](https://colab.research.google.com/drive/12RtHj3OmjxfOxZadWmA93v9vXr8bYqV6)
+![Ipyleaflet Map Function Output](https://user-images.githubusercontent.com/66324301/119862482-8bac1c00-bee6-11eb-925c-ba619283c191.png)
+ 
+## Demonstration Notebooks:
+
+1. [Download data from GEE](https://colab.research.google.com/drive/14V2hgVFVVddbVo_xKWHYuHyvGeJ11NUC?usp=sharing)
+2. [Running functions](https://colab.research.google.com/drive/1gO1QjxAL1Q5uvzpKCz1SeioKfs5XazGh?usp=sharing)
 

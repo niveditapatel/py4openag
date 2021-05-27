@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+py4openag/__init__.py
+py4openag/py4openag.py
+py4openag.egg-info/PKG-INFO
+py4openag.egg-info/SOURCES.txt
+py4openag.egg-info/dependency_links.txt
+py4openag.egg-info/not-zip-safe
+py4openag.egg-info/requires.txt
+py4openag.egg-info/top_level.txt

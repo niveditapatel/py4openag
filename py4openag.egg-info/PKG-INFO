@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: py4openag
+Version: 0.0.0.9
+Summary: This open-source package aims to establish the ML4Ops pipeline from public databases to integrated analytics for agriculture. It provides  a variety of functions  to study climate trends and simplify the calculation of commonly used metrics in agriculture. 
+Home-page: https://github.com/niveditapatel/py4openag
+Author: Nivedita Patel
+Author-email: patelnivedita@icloud.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PY4OPENAG
+
+This open-source package aims to establish the ML4Ops pipeline from public databases to integrated analytics for agriculture. It provides  a variety of functions  to study climate trends and simplify the calculation of commonly used metrics in agriculture, such as growing degree days, extreme heat degree days, the base temperature for different crop types, as well as basic climate metrics like average temperature and total precipitation for user specified time periods. The package also includes unsupervised and supervised learning based on these metrics. . 
+
+The development of this package is supported by the SMARTFARM project. The SMARTFARM program of DOE’s Advanced Research Projects Agency-Energy (ARPA-E) aims to innovate technologies that can help to cost-effectively and efficiently quantify feedstock emissions at the field level. The project aspires to facilitate advanced biofuels that can potentially be a carbon-negative source of energy and aims to promote environmental sustainability while simultaneously increasing farmer profitability and productivity. 
+
+
+## Functions In The Package:
+The following functions are currently included in the package. More information and a demonstration on each function can be found in the links provided.
+
+[Annual Average Temperature: average_temperature](https://colab.research.google.com/drive/1yAIbQYOK6uNcoUJkx4TYnYExj5YYoFQj?authuser=1) <br>
+[Annual Total Precipitation: total_precipitation](https://colab.research.google.com/drive/12jJ3PITv0XxCKnlSbLCbk-j9Pp15b98h?authuser=1)<br>
+[Extreme Degree Days: extreme_degree_days](https://colab.research.google.com/drive/1lVU1J_9P2Nl7EweV_ZkJPhvQerJlBcGt?authuser=1) <br>
+[Growing degree days: growing_degree_days](https://colab.research.google.com/drive/17gCluadiRPwwEdybSuuFyYoHyuaJV7WT?authuser=1) <br>
+[Base Temperature For Growing Degree Days: growingdays_basetemp](https://colab.research.google.com/drive/1mkQNKEM_QsAMLzFSyuHQi5p9p8r6Rboj?authuser=1) <br>
+[Temperature Trend: temptrend](https://colab.research.google.com/drive/1MQ2i8PwOeE3mBQL_YRkFqS5d2njyCYxU?authuser=1) <br>
+ 
+## Demonstration Notebooks:
+
+1. [Download data from GEE](https://colab.research.google.com/drive/14V2hgVFVVddbVo_xKWHYuHyvGeJ11NUC?authuser=1)
+2. [Running functions](https://colab.research.google.com/drive/1gO1QjxAL1Q5uvzpKCz1SeioKfs5XazGh?authuser=1)
+
+
+
