@@ -35,6 +35,10 @@ setup(name='py4openag',
         'pandas',
         'datetime',
         'sklearn',
+        'matplotlib',
+        'ipyleaflet>=0.13.0',
+        'ipywidgets>=7.5.0',
+        'random2'
         ],
       classifiers=[
         "Programming Language :: Python :: 3",
