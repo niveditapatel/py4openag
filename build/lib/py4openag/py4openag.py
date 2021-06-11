@@ -75,7 +75,8 @@ class functions:
         if (temp>0):
           sum+=temp
         k+=1
-    return sum
+    gdd=sum/k
+    return gdd
 
   def growingdays_basetemp(self,crop):
     if crop in ["wheat", "barley", "rye", "oats", "flaxseed", "lettuce", "asparagus"]:
